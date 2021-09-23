@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Successful Buy</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container" style="text-align:center">
+
+
+
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/customers/showAllProducts(customerId=${customer.id})}">Back To Products</a>
+
+            <a class="navbar-brand" th:href="@{/customers/showMyPage}">Back to My Home Page</a>
+
+            <a class="navbar-brand" th:href="@{/customers/showMyCart(customerId=${customer.id})}">Back To My Cart</a>
+
+            <form class="d-flex" th:action="@{/logout}" method="post">
+                <button class="btn btn-danger" type="submit">Sign out</button>
+            </form>
+        </div>
+    </nav>
+        <br><br><br><br>
+        <h3>Thank You <span th:text="${customer.firstName}"/> You have successfully bought <span th:text="${product.name}"/></h3>
+        <br>
+</div>
+
+</body>
+</html>

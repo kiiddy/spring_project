@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:text-align="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>Login Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Reference Bootstrap files -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container" style="text-align:center">
+    <div>
+        <br><br><br>
+        <h1>Login</h1>
+        <hr>
+    </div>
+    <form th:action="@{/login}" method="POST" class="form-horizontal" style="max-width: 600px; margin: 0 auto;">
+        <div class="form-group">
+            <div class="col-xs-15">
+                <div>
+                    <div class="text--center" th:if="${param.error}">
+                        Invalid username and password.
+                    </div>
+
+
+                    <div class="text--center" th:if="${param.logout}">
+                        You have been logged out.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="m-3">
+            <div class="form-group row">
+<!--                <label class="col-4 col-form-label">Username: </label>-->
+                <div class="col-8">
+                    <input type="text" name="username" placeholder="Enter the username" class="form-control">
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+<!--                <label class="col-4 col-form-label">Password: </label>-->
+                <div class="col-8">
+                    <input type="password" name="password" placeholder="Enter the password" class="form-control" >
+                </div>
+            </div>
+
+            <br>
+            <div>
+                <button type="submit" class="btn btn-success">Login</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <p class="py-2">New User ? <a th:href="@{/showRegistrationPage}">Register</a></p>
+
+</div>
+
+</body>
+</html>

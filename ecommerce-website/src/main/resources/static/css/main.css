@@ -1,0 +1,22 @@
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import 'bootstrap';
+
+body{
+}
+
+label{
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 700;
+}
+
+.invalid-feedback{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    }
+
+.text-align{
+    text-align: left;
+    }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Zemoso Mart Home Page</title>
+</head>
+<body>
+    <div class="container" style="text-align:center">
+        <br><br><br><br><br><br>
+        <h1>Welcome to Zemoso Mart</h1>
+        <hr>
+        <br><br>
+        <p>Already a User ?</p>
+        <a th:href="@{/login}" class="btn btn-info btn-sm">Login</a>
+        <br><br><br>
+        <p>New User ?</p>
+        <a th:href="@{/showRegistrationPage}" class="btn btn-info btn-sm">Register</a>
+        <br><br><br><br><br>
+    </div>
+</body>
+</html>
