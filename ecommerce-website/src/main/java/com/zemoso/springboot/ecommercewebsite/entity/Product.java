@@ -3,6 +3,7 @@ package com.zemoso.springboot.ecommercewebsite.entity;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "product")
@@ -111,5 +112,10 @@ public class Product {
             return o.id == this.id;
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, quantity, price, customers);
     }
 }

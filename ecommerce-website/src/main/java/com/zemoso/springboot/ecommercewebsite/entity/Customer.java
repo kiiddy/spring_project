@@ -43,8 +43,6 @@ public class Customer {
     private List<Product> products;
 
 
-//   @OneToMany(fetch = FetchType.LAZY,mappedBy = "user",cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
-//   private List<Role> roles;
 
     public Customer() {
     }
