@@ -1,6 +1,4 @@
 package com.zemoso.springboot.ecommercewebsite.config;
-
-import com.zemoso.springboot.ecommercewebsite.dao.CustomerRepository;
 import com.zemoso.springboot.ecommercewebsite.entity.Customer;
 import com.zemoso.springboot.ecommercewebsite.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;

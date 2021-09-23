@@ -20,8 +20,7 @@ public class ProductDAOImpl implements ProductDAO{
     @Transactional
     public List<Product> findAll() {
         Query query = entityManager.createQuery("from Product");
-        List<Product> products = query.getResultList();
-        return products;
+        return query.getResultList();
     }
 
     @Override

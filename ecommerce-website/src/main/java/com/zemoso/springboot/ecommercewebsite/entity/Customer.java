@@ -1,7 +1,5 @@
 package com.zemoso.springboot.ecommercewebsite.entity;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.util.ArrayList;
